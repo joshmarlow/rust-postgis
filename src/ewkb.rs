@@ -17,6 +17,7 @@ use error::Error;
 
 // --- Structs for reading PostGIS geometries into
 
+#[cfg_attr(feature="serde_support", derive(Deserialize, Serialize))]
 #[derive(PartialEq, Clone, Debug)]
 pub struct Point {
     pub x: f64,

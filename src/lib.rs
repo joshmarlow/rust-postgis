@@ -39,6 +39,11 @@
 extern crate postgres;
 extern crate byteorder;
 
+#[cfg(feature="serde_support")]
+extern crate serde;
+#[cfg(feature="serde_support")]
+#[macro_use]extern crate serde_derive;
+
 mod error;
 mod types;
 pub use types::{Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygon};

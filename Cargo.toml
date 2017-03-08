@@ -16,3 +16,10 @@ doctest = false
 [dependencies]
 postgres = "^0.14"
 byteorder = "^0.5"
+
+# Only required for the serde_support feature
+serde = { version="*", optional=true}
+serde_derive = { version="*", optional=true}
+
+[features]
+serde_support = ["serde", "serde_derive"]
